@@ -1,0 +1,13 @@
+
+###
+GET  http://localhost:4000/api/employees
+###
+POST  http://localhost:4000/api/employees
+Content-Type: application/json
+
+{
+    "name": "Mario Roberto",
+    "position": "Developer",
+    "office": "Home",
+    "salary": "20000"
+}
