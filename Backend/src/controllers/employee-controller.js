@@ -10,8 +10,10 @@ employeeCtrl.getEmployees=async (req,res)=>{
       await  newEmployee.save();
       res.send({message: 'Employee Created'})
     }
-    employeeCtrl.getEmployee=(req,res)=>{
-        res.send('Getting one employee');
+    employeeCtrl.getEmployee=async(req,res)=>{
+        console.log(req.params);
+      const employee= await  Employee.findById(req.params.id);
+        res.send(employee);
     }
     employeeCtrl.UpdateEmployees=(req,res)=>{
         res.send('Update Employees');
