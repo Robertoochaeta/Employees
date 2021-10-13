@@ -11,7 +11,7 @@ employeeCtrl.getEmployees=async (req,res)=>{
       res.send({message: 'Employee Created'})
     }
     employeeCtrl.getEmployee=(req,res)=>{
-        res.send('Get Employees');
+        res.send('Getting one employee');
     }
     employeeCtrl.UpdateEmployees=(req,res)=>{
         res.send('Update Employees');
