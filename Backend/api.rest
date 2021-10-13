@@ -11,3 +11,5 @@ Content-Type: application/json
     "office": "Home",
     "salary": "20000"
 }
+###
+GET http://localhost:4000/api/employees/6165c2fde05cc734ea2eb359
