@@ -5,7 +5,7 @@ const employeeCtrl=require('../controllers/employee-controller.js')
 
 router.get('/',employeeCtrl.getEmployees);
 router.post('/', employeeCtrl.CreateEmployees);
-router.get('/', employeeCtrl.getEmployee);
+router.get('/:id', employeeCtrl.getEmployee);
 router.put('/', employeeCtrl.UpdateEmployees);
 router.delete('/',employeeCtrl.DeleteEmployees);
 module.exports=router;
