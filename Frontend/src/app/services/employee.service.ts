@@ -9,7 +9,8 @@ export class EmployeeService {
 url_Api='http://localhost:4000'
 
 getEmployees(){
-  return[]
+return  this.http.get(this.url_Api);
+
 }
 
 }
