@@ -18,8 +18,9 @@ employeeCtrl.getEmployees=async (req,res)=>{
     employeeCtrl.UpdateEmployees=(req,res)=>{
         res.send('Update Employees');
     }
-    employeeCtrl.DeleteEmployees=(req,res)=>{
-        res.send('Delete Employees');
+    employeeCtrl.DeleteEmployees=async(req,res)=>{
+     await Employee.findByIdAndDelete(req.params.id);
+     res.json({status:'Employee Deleted'});
     }
 
 

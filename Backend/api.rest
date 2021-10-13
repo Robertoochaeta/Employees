@@ -6,10 +6,13 @@ POST  http://localhost:4000/api/employees
 Content-Type: application/json
 
 {
-    "name": "Mario Roberto",
+    "name": "Juan Chorizo",
     "position": "Developer",
-    "office": "Home",
+    "office": "Freelance",
     "salary": "20000"
 }
 ###
 GET  http://localhost:4000/api/employees/6165c2fde05cc734ea2eb359
+
+###
+DELETE  http://localhost:4000/api/employees/61670e16b867d5c8660caa59
