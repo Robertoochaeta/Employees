@@ -10,7 +10,7 @@ export class EmployeeComponent implements OnInit {
   constructor(public employeeService: EmployeeService) { }
 
   ngOnInit(): void {
-  
+  this.getEmployees();
   }
 getEmployees(){
   this.employeeService.getEmployees().subscribe(
