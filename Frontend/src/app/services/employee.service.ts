@@ -5,12 +5,12 @@ import { Employee } from 'src/models/employee';
   providedIn: 'root'
 })
 export class EmployeeService {
+  url_Api='http://localhost:4000/api/employees'
+  employees :Employee[]
   constructor(private http: HttpClient){}
-url_Api='http://localhost:4000/api/employees'
-employees :Employee[]
 
 getEmployees(){
-return  this.http.get(this.url_Api);
+return  this.http.get<Employee[]>(this.url_Api);
 
 }
 
