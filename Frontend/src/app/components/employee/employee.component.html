@@ -18,9 +18,11 @@
             </thead>
             <tbody>
                 <tr *ngFor="let employee of employeeService.employees">
-                    <td>
-                        {{employee.name}}
-                    </td>
+                    <td> {{employee.name}}</td>
+                    <td>{{employee.position}}</td>
+                    <td>{{employee.office}}</td>
+                    <td><button class="btn btn-secundary">Edit</button>
+                        <button class="btn btn-danger">Delete</button></td>
                 </tr>
             </tbody>
         </table>
