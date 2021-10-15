@@ -6,6 +6,7 @@ import { Employee } from 'src/models/employee';
 })
 export class EmployeeService {
   url_Api='http://localhost:4000/api/employees'
+  selectedEmployee:Employee;
   employees :Employee[]
   constructor(private http: HttpClient){}
 

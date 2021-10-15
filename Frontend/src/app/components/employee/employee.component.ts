@@ -26,6 +26,6 @@ getEmployees(){
   )
 }
 addEmployee(form:NgForm){
-
+console.log(form.value);
 }
 }
