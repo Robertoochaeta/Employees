@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Form, NgForm } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 import { EmployeeService } from '../../services/employee.service'; 
+
 
 @Component({
   selector: 'app-employee',
@@ -26,6 +27,11 @@ getEmployees(){
   )
 }
 addEmployee(form:NgForm){
-console.log(form.value);
+this.employeeService.createEmployee(form.value).subscribe(
+res=> {
+this.getEmployees();
+},
+err=> console.log(err)
+);
 }
 }
