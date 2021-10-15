@@ -7,6 +7,9 @@ import { EmployeeService } from '../../services/employee.service';
 })
 export class EmployeeComponent implements OnInit {
 placeholder= 'Enter Your  FullName';
+position='Enter Your Position';
+office='Enter Your Office';
+salary='Enter Your Salary';
   constructor(public employeeService: EmployeeService) { }
 
   ngOnInit(): void {
