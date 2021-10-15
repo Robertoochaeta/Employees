@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Form, NgForm } from '@angular/forms';
 import { EmployeeService } from '../../services/employee.service'; 
+
 @Component({
   selector: 'app-employee',
   templateUrl: './employee.component.html',
@@ -22,5 +24,8 @@ getEmployees(){
     },
     err => console.log(err)
   )
+}
+addEmployee(form:NgForm){
+
 }
 }
