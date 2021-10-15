@@ -29,7 +29,8 @@ getEmployees(){
 addEmployee(form:NgForm){
 this.employeeService.createEmployee(form.value).subscribe(
 res=> {
-this.getEmployees();
+this.getEmployees(),
+form.reset();
 },
 err=> console.log(err)
 );
