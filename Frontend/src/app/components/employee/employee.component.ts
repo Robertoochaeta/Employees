@@ -6,7 +6,7 @@ import { EmployeeService } from '../../services/employee.service';
   styleUrls: ['./employee.component.css']
 })
 export class EmployeeComponent implements OnInit {
-
+placeholder= 'Enter Your  FullName';
   constructor(public employeeService: EmployeeService) { }
 
   ngOnInit(): void {
