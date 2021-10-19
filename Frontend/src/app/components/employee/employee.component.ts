@@ -38,7 +38,7 @@ err=> console.log(err)
 deleteEmployees(id:string){
 if( confirm('Are you sure you want to delete it ?')){
   this.employeeService.deleteEmployee(id).subscribe(
-    (res)=> console.log(res) ,
+    (res)=> this.getEmployees(),
     (err) => console.log(err)
     
   );
