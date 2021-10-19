@@ -48,6 +48,9 @@ if( confirm('Are you sure you want to delete it ?')){
 
 }
 editEmployee(employee :Employee){
-  console.log(employee);
+  this.employeeService.selectedEmployee=employee;
+}
+resetForm(form:NgForm){
+form.reset();
 }
 }
