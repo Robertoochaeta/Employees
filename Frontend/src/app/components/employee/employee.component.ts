@@ -35,7 +35,14 @@ form.reset();
 err=> console.log(err)
 );
 }
-deleteEmployees(){
-  alert("Deleting");
+deleteEmployees(id:string){
+if( confirm('Are you sure you want to delete it ?')){
+  this.employeeService.deleteEmployee(id).subscribe(
+    (res)=> console.log(res) ,
+    (err) => console.log(err)
+    
+  );
+}
+
 }
 }
