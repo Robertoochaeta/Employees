@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { EmployeeService } from '../../services/employee.service'; 
+import { Employee } from '../../../models/employee';
 
 
 @Component({
@@ -44,5 +45,9 @@ if( confirm('Are you sure you want to delete it ?')){
   );
 }
 
+
+}
+editEmployee(employee :Employee){
+  console.log(employee);
 }
 }
