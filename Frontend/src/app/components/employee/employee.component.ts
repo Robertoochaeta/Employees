@@ -28,13 +28,20 @@ getEmployees(){
   )
 }
 addEmployee(form:NgForm){
-this.employeeService.createEmployee(form.value).subscribe(
-res=> {
-this.getEmployees(),
-form.reset();
-},
-err=> console.log(err)
-);
+if(form.value._id){
+this.employeeService.PutEmployee(form.value).subscribe(
+  res => console.log(res),
+  err => console.log(err)
+)
+}else{
+  this.employeeService.createEmployee(form.value).subscribe(
+    res=> {
+    this.getEmployees(),
+    form.reset();
+    },
+    err=> console.log(err)
+    );
+}
 }
 deleteEmployees(id:string){
 if( confirm('Are you sure you want to delete it ?')){

@@ -25,6 +25,9 @@ return  this.http.get<Employee[]>(this.url_Api);
 createEmployee(employee:Employee){
 return this.http.post(this.url_Api,employee);
 }
+PutEmployee(employee:Employee){
+  return this.http.put(` ${this.url_Api}/${employee._id} `,employee)
+}
 deleteEmployee(_id:string){
   return this.http.delete(` ${this.url_Api}/${_id} `)
 }
