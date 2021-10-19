@@ -16,7 +16,7 @@
                 <div class ="form-group">
                     <input type="number" class="form-control" [placeholder]="salary" name="salary" [(ngModel)]= "employeeService.selectedEmployee.salary" >
                 </div>
-                <button class="btn btn-primary mr-2" (onClick)="alert">Clean</button>
+                <button class="btn btn-primary mr-2">Clean</button>
                 <button class="btn btn-secondary">Save</button>
                </form>
             </div>
@@ -38,7 +38,7 @@
                     <td>{{employee.position}}</td>
                     <td>{{employee.office}}</td>
                     <td><button class="btn btn-secundary btn-sm"><i class="material-icons">edit</i></button>
-                        <button class="btn btn-danger btn-sm"><i class="material-icons">delete</i></button></td>
+                        <button class="btn btn-danger btn-sm"><i class="material-icons" (click)="deleteEmployees()">delete</i></button></td>
                 </tr>
             </tbody>
         </table>

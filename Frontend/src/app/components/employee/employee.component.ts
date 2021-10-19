@@ -35,4 +35,7 @@ form.reset();
 err=> console.log(err)
 );
 }
+deleteEmployees(){
+  alert("Deleting");
+}
 }
